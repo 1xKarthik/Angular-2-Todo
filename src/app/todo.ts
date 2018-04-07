@@ -1,9 +1,11 @@
 export class Todo {
-    id: number;
-    title: string = '';
-    complete: boolean = false;
+  id: number;
+  title: string = "";
+  complete: boolean = false;
 
-    constructor(values: Object= {}) {
-        Object.assign(this, values);
-    }
+  constructor(values: Object = {}) {
+    console.log("7777");
+
+    Object.assign(this, values);
+  }
 }

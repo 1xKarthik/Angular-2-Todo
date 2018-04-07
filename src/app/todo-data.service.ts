@@ -23,6 +23,7 @@ export class TodoDataService {
   }
 
   updateTodoById(id: number, values: Object = {}): Todo {
+    console.log('5555');        
     let todo = this.getTodoById(id);
     if(!todo) {
       return null;
@@ -36,10 +37,12 @@ export class TodoDataService {
   }
 
   getTodoById(id: number): Todo {
+    console.log('6666');        
     return this.todos.filter(todo => todo.id == id).pop();
   }
 
   toggleTodoComplete(todo: Todo){
+    console.log('4444');        
     let updatedTodo = this.updateTodoById(todo.id, {
       complete: !todo.complete
     });
