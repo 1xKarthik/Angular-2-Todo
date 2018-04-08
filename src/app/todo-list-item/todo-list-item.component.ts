@@ -17,7 +17,6 @@ export class TodoListItemComponent implements OnInit {
   ngOnInit() {}
 
   toggleTodoComplete(todo: Todo) {
-    console.log('zzzz');    
     this.toggleComplete.emit(todo);
   }
 
