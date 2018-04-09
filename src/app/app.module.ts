@@ -13,6 +13,8 @@ import { ApiService } from './api.service';
 import { AppRoutingModule } from './app-routing.module';
 import { TodosComponent } from './todos/todos.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { Ng2PaginationModule } from 'ng2-pagination';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule,    
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    Ng2PaginationModule
   ],
   providers: [TodoDataService, ApiService],
   bootstrap: [AppComponent]

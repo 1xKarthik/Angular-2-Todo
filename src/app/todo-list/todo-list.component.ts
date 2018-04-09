@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { Todo } from "../todo";
+import { PaginatePipe, PaginationService } from 'ng2-pagination';
+
 
 @Component({
   selector: "app-todo-list",
@@ -7,6 +9,7 @@ import { Todo } from "../todo";
   styleUrls: ["./todo-list.component.css"]
 })
 export class TodoListComponent implements OnInit {
+  name: string = '';
   @Input() todos: Todo[];
 
   @Output() remove: EventEmitter<Todo> = new EventEmitter();

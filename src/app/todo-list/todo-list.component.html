@@ -1,10 +1,13 @@
 <section class="main" *ngIf="todos.length > 0">
   <ul class="todo-list">
-    <li *ngFor="let todo of todos" [class.completed]="todo.complete">
-      <app-todo-list-item
-        [todo]="todo"
-        (toggleComplete)="onToggleTodoComplete($event)"
-        (remove)="onRemoveTodo($event)"></app-todo-list-item>
+    <li *ngFor="let todo of todos | paginate:{itemsPerPage: 3, currentPage: p }"
+     [class.completed]="todo.complete">
+      <app-todo-list-item [todo]="todo" 
+      (toggleComplete)="onToggleTodoComplete($event)" 
+      (remove)="onRemoveTodo($event)"></app-todo-list-item>
     </li>
   </ul>
+  <pagination-controls (pageChange) = "p = $event"></pagination-controls>
+  <input [value] = "name" (input) = "name = $event.target.value">
+  {{name}}
 </section>
